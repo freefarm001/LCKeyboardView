@@ -18,17 +18,18 @@
 
 @interface LCKeyBoardView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable));
-- (instancetype)init __attribute__((unavailable));
-
 /**
  实例方法
  
  @param frame frame
  @param inputView 用于输入的view（UITextView或者UITextField）
- @return <#return value description#>
+ @return 实例
  */
 - (instancetype)initWithFrame:(CGRect)frame andInputView:(UIView *)inputView;
+
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 /** 键盘消失时是否自动隐藏view（默认是NO） */
 @property (assign, nonatomic) BOOL autoHidden;
